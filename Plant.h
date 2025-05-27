@@ -3,6 +3,7 @@
 #include "Stock.h" 
 using namespace std;
 
+//inherit from stock
 class Plant : public StockItem {
 public:
     int growthStage; 

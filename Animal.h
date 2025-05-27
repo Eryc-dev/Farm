@@ -3,17 +3,21 @@
 #include "Stock.h" 
 using namespace std;
 
+// animal calss inherit by stock
 class Animal : public StockItem {
 public:
     int hungerLevel; 
     string product;
     bool canProduce;
+    
+    //constructor
     Animal(string n, string d, string p) : StockItem(n,d), hungerLevel(50), product(p), canProduce(false) {}
 
     void feed() { hungerLevel = 0; std::cout << name << " fed.\n"; }
     
     bool isReady() override { return canProduce; }
     
+    //inherit from stock
     string getProduct() override { return product; }
     
     void dailyUpdate() override {
